@@ -121,7 +121,7 @@ app.on('activate', () => {
 
 function getweather(city){
   let weather_data = Array(3);
-  axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=cb4ccc3e2563705ac9ce83656107bcd4&units=imperial`)
+  axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=APP_ID_GIVEN&units=imperial`)
   .then(res => {
     weather_data[0] = city;
     weather_data[1] = res.data.weather[0].icon;
